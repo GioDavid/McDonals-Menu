@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "mcDonals-Menu",
+    "slug": "mcDonals-Menu",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
