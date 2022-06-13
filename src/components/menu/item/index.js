@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { Image, Text, StyleSheet, View } from 'react-native'
 
-export default class digimon extends Component {
+export default class index extends Component {
     render() {
         const { item } = this.props;
         return (
             <View style={styles.container}>
                 <Image
-                    style={styles.tinyLogo}
+                    style={styles.img}
                     source={{
                         uri: item.url,
                     }}
@@ -21,10 +21,20 @@ export default class digimon extends Component {
 }
 
 const styles = StyleSheet.create({
-    tinyLogo: {
-        width: 200,
-        height: 200,
+    img: {
+        width: 120,
+        height: 80,
     },
-    container:{ flex: 1, backgroundColor: '#fafafa', margin: 4 },
-    textFields:{ flex: 1, color: 'black', height: 180 }
+    container:{ flex: 1, 
+        padding: 8,
+        paddingTop: 48,
+        alignContent: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'white', 
+        borderWidth: 1, 
+        borderColor: '#eeeeee', 
+        margin: 12, 
+        width: 140, 
+        height: 190 },
+    textFields:{ flex: 1, color: 'black', height: 60 }
 })

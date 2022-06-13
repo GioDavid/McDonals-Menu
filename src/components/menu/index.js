@@ -22,10 +22,6 @@ export default class index extends Component {
         {this.context && this.context.items &&<SectionList
           sections={this.context.items}
           keyExtractor={(item, index) => item.name + index}
-          // renderItem={({item, index}) => <Text key={index}>{item.name}</Text>}
-          // renderSectionHeader={({ section}) => (
-          //   <Text style={styles.header}>{section.title}</Text>
-          // )}
           renderSectionHeader={({ section }) => (
             <View styles={{ display: 'flex', flexDirection: 'column'}}>
               <Text style={styles.sectionHeader}>{section.title}</Text>
@@ -33,13 +29,13 @@ export default class index extends Component {
                 <FlatList
                   horizontal
                   data={section.data}
-                  renderItem={({ item }) => <Text key={index}>{item.name}</Text>}
+                  renderItem={({ item }) => <Item item={item} />}
                   showsHorizontalScrollIndicator={false}
                 />
               ) : null}
             </View>
           )}
-          renderItem={({ item, section }) => {
+          renderItem={() => {
             return null
           }}
         />}
@@ -51,7 +47,9 @@ export default class index extends Component {
 const styles = StyleSheet.create({
   container: {
     paddingTop: StatusBar.currentHeight,
-    marginHorizontal: 16,
+    margin: 16,
+    marginBottom: 64,
+    paddingBottom: 64,
   },
   item: {
     backgroundColor: "#f9c2ff",
