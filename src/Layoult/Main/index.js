@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, SafeAreaView, Image, StyleSheet } from "react-native";
 import { getMenu } from "../../api";
 import Menu from "../../components/menu";
+import Modal from "../../components/modal";
 import Context from "../../context/context";
 
 export default class index extends Component {
@@ -42,6 +43,7 @@ export default class index extends Component {
           />
         </View>
         <Menu />
+        <Modal selectedItem={this.context.selectedItem} />
       </SafeAreaView>
     );
   }
@@ -50,7 +52,7 @@ export default class index extends Component {
 const styles = StyleSheet.create({
   logoContainer: {
     alignItems: 'center',
-    marginTop: 24
+    marginTop: 24,
   },
   main: {
     flex: 1

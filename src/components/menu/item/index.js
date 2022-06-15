@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import { Image, Text, StyleSheet, View } from 'react-native'
+import { Image, Text, StyleSheet, View, TouchableOpacity } from 'react-native'
 
 export default class index extends Component {
     render() {
-        const { item } = this.props;
+        const { item, setSelectedItem } = this.props;
         return (
-            <View style={styles.container}>
+            <TouchableOpacity style={styles.container} onPress={() =>{
+                setSelectedItem(item);
+            }}>
                 <Image
                     style={styles.img}
                     source={{
@@ -15,7 +17,7 @@ export default class index extends Component {
                 <View style={{ flexDirection: 'row' }}>
                 <Text style={styles.textFields}>{item.name}</Text>
                 </View>
-            </View>
+            </TouchableOpacity>
         )
     }
 }

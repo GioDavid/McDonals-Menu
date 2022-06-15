@@ -13,7 +13,7 @@ export default class index extends Component {
   }
 
   renderItem({ item }) {
-    return <Item Item={item} />;
+    return <Item item={item} setSelectedItem={this.context.setSelectedItem} />;
   }
 
   render() {
@@ -29,7 +29,7 @@ export default class index extends Component {
                 <FlatList
                   horizontal
                   data={section.data}
-                  renderItem={({ item }) => <Item item={item} />}
+                  renderItem={this.renderItem}
                   showsHorizontalScrollIndicator={false}
                 />
               ) : null}
