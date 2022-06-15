@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
     img: {
         width: 120,
         height: 80,
+        marginLeft: 'auto',
+        marginRight: 'auto'
     },
     container:{ flex: 1, 
         padding: 8,
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
         borderWidth: 1, 
         borderColor: '#eeeeee', 
         margin: 12, 
-        width: 140, 
-        height: 190 },
-    textFields:{ flex: 1, color: 'black', height: 60 }
+        width: 160, 
+        height: 160 },
+    textFields:{ flex: 1, color: 'black', height: 60, fontSize: 12, textAlign: 'center' }
 })

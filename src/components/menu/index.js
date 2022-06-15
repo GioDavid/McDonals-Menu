@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     fontWeight: '800',
-    fontSize: 18,
+    fontSize: 36,
     color: 'black',
     marginTop: 20,
     marginBottom: 5,
