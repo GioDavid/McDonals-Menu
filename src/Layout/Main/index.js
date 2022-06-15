@@ -43,7 +43,7 @@ export default class index extends Component {
           />
         </View>
         <Menu />
-        <Modal selectedItem={this.context.selectedItem} />
+        <Modal selectedItem={this.context.selectedItem} setSelectedItem={this.context.setSelectedItem} />
       </SafeAreaView>
     );
   }

@@ -2,7 +2,6 @@ import React from "react";
 import { Image, Text, StyleSheet, View } from "react-native";
 
 const index = ({item}) => {
-
   return (
     <View style={styles.container}>
         <View style={styles.imageContainer}>
